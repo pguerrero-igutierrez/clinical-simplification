@@ -1,3 +1,5 @@
+# Clinical Text Simplifier by Fine-Tuning Qwen and Llama with CLARA-MeD Corpus
+
 The Llama and Qwen applications are publicly available as web demos on Hugging Face Spaces:
 
 - [Llama Text Simplifier](https://huggingface.co/spaces/pguerrero-igutierrez/llama-text-simplifier)  
