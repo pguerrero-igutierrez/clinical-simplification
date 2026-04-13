@@ -7,6 +7,18 @@ This project fine-tunes two large language models for the task of automatic text
 
 on the [CLARA-MeD corpus](https://github.com/lcampillos/CLARA-MeD), a Spanish parallel corpus of clinical sentences and their simplified versions.
 
+### Model variants evaluated
+
+| ID | Description |
+|----|-------------|
+| `Llama (zero-shot)` | Base Llama-3.2-1B-Instruct, no fine-tuning |
+| `Llama-FT` | Base + LoRA adapter (adapter-only inference) |
+| `Llama-merged` | LoRA weights merged into the base model |
+| `Qwen (zero-shot)` | Base Qwen3.5-0.8B, no fine-tuning |
+| `Qwen-FT` | Base + LoRA adapter (adapter-only inference) |
+| `Qwen-merged` | LoRA weights merged into the base model |
+
+---
 ## Features
 
 - **Sentence-level simplification** of clinical texts in Spanish.
