@@ -73,6 +73,7 @@ The entire pipeline (data loading, baseline inference, fine-tuning, evaluation a
 ```
 APP1_project_IkerGutierrez_PaulaGuerrero.ipynb
 ```
+> Note: A GPU is required to execute the notebook efficiently.
 
 **Steps:**
 1. Access [this link](https://datos.cchs.csic.es/en/dataset/clara-med-simplified-sentences/resource/a05fd101-9c06-4312-bb30-13f6ea008d46) to download the corpus `claramed_synt_simp_aligned.tsv`.
