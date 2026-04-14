@@ -121,5 +121,5 @@ python demo/app_llama.py
 - [guerrerocastellopaula@gmail.com](mailto:guerrerocastellopaula@gmail.com)  
 - [ikergutierrez@opendeusto.es](mailto:ikergutierrez@opendeusto.es)  
 ---
-*Project for NLP Applications I*   
-*Masters in Language Analysis and Processing*  
+*Project for NLP Applications I 2025-26*   
+*Masters in Language Analysis and Processing UPV/EHU*  
