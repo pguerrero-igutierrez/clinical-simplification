@@ -11,7 +11,7 @@
 
 This project develops and evaluates two **automatic clinical text simplification (ATS)** models for Spanish. Clinical texts are often written in dense technical language that patients and non-specialists struggle to understand. Our goal is to make medical information more accessible using fine-tuned language models.
 
-We fine-tune the models on the **CLARA-MeD simplified sentences dataset** (Bartolomé Rodríguez et al., 2024), a Spanish parallel corpus for clinical text simplification derived from clinical trial protocols. Available at: https://doi.org/10.20350/digitalCSIC/16110
+We fine-tune the models on the **CLARA-MeD simplified sentences dataset** (Bartolomé Rodríguez et al., 2024), a Spanish parallel corpus for clinical text simplification derived from clinical trial protocols. Available at: [https://doi.org/10.20350/digitalCSIC/16110](https://datos.cchs.csic.es/en/dataset/clara-med-simplified-sentences)
 
 
 
