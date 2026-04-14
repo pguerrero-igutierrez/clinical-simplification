@@ -99,3 +99,17 @@ python demo/app_llama.py
 ```
 
 ---
+
+## Project Structure
+
+| File/Folder                | Description |
+|----------------------------|-------------|
+
+
+
+
+### Authors
+
+**Paula Guerrero & Iker Gutierrez**  
+Project for NLP Applications I - Masters in Language Analysis and Processing 
+Contact: [guerrerocastellopaula@gmail.com](mailto:guerrerocastellopaula@gmail.com) | [ikergutierrez@opendeusto.es](mailto:ikergutierrez@opendeusto.es)  
