@@ -1,6 +1,8 @@
 # Clinical Text Simplifier by Fine-Tuning Qwen and Llama with CLARA-MeD
 
-**Authors:** Paula Guerrero Castelló & Iker Gutierrez Fandiño — *University of the Basque Country (EHU)*
+**Authors:** Paula Guerrero Castelló & Iker Gutierrez Fandiño    
+*University of the Basque Country (UPV/EHU)*  
+2025-26
 
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](paper/Clinical_text_simplifier.pdf)
 [![HuggingFace - Qwen Demo](https://img.shields.io/badge/%20Demo-Qwen--FT--merged-blue)](https://huggingface.co/spaces/pguerrero-igutierrez/qwen-text-simplifier)
@@ -20,7 +22,7 @@ Both merged models are deployed as public Gradio apps on Hugging Face Spaces.
 
 ### Example
 
-**Input** *(clinical trial protocol)*:
+**Input**:
 > *Se recomienda profilaxis tromboembólica durante el postoperatorio.*
 
 **[Qwen-FT](https://huggingface.co/spaces/pguerrero-igutierrez/qwen-text-simplifier) output**:
@@ -34,9 +36,6 @@ Both merged models are deployed as public Gradio apps on Hugging Face Spaces.
 ### Model variants evaluated
 
 We evaluate two variants for each fine-tuned model, along with zero-shot baslines. All models are evaluated on the 120-sentence CLARA-MeD test split using three complementary metrics:
-- SARI 
-- BERTScore (F1) 
-- Flesch–Szigriszt Reading Ease (FRE)
 
 | Model | SARI ↑ | BERT-F1 ↑ | FRE ↑ |
 |-------|--------|-----------|-------|
