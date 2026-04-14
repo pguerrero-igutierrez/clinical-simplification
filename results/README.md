@@ -19,7 +19,7 @@ Each prediction CSV contains three columns:
 
 ```
 source      — original complex sentence
-reference   — expert-written simplified sentence
+reference   — expert simplified sentence
 prediction  — model output
 ```
 
