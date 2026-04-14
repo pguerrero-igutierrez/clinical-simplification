@@ -132,7 +132,7 @@ Also cite the CLARA-MeD dataset:
 
 ```bibtex
 @dataset{bartolome2024claramed,
-  author    = {Bartolom{\'e} Rodr{\'i}guez, Roc{\'i}o and Terroba Reinares, Ana Rosa and Campillos-Llanos, Leonardo},
+  author    = {Bartolomé Rodríguez, Rocío and Terroba Reinares, Ana Rosa and Campillos-Llanos, Leonardo},
   title     = {{CLARA-MeD simplified sentences}},
   year      = {2024},
   publisher = {DIGITAL.CSIC},
