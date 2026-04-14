@@ -129,6 +129,7 @@ If you use this work, please cite:
 
 Also cite the CLARA-MeD dataset:
 
+```bibtex
 @dataset{bartolome2024claramed,
   author    = {Bartolom{\'e} Rodr{\'i}guez, Roc{\'i}o and Terroba Reinares, Ana Rosa and Campillos-Llanos, Leonardo},
   title     = {{CLARA-MeD simplified sentences}},
@@ -138,7 +139,7 @@ Also cite the CLARA-MeD dataset:
   url       = {https://doi.org/10.20350/digitalCSIC/16110},
   note      = {Dataset}
 }
-
+```
 ---
 
 
