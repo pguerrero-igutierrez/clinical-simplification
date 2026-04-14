@@ -18,8 +18,8 @@ We fine-tune the models on the **CLARA-MeD simplified sentences dataset** (Barto
 
 | Model | HuggingFace Hub |
 |-------|-----------|
-| `Qwen/Qwen3.5-0.8B` | [pguerrero-igutierrez/qwen_claramed]([https://huggingface.co/pguerrero-igutierrez/qwen_claramed](https://huggingface.co/pguerrero-igutierrez/qwen3.5-claramed]) |
-| `meta-llama/Llama-3.2-1B-Instruct` | [pguerrero-igutierrez/llama_claramed]([https://huggingface.co/pguerrero-igutierrez/llama_claramed](https://huggingface.co/pguerrero-igutierrez/llama-3.2-claramed]) |
+| `Qwen/Qwen3.5-0.8B` | [pguerrero-igutierrez/qwen_claramed]([[https://huggingface.co/pguerrero-igutierrez/qwen_claramed]) |
+| `meta-llama/Llama-3.2-1B-Instruct` | [pguerrero-igutierrez/llama_claramed]([[https://huggingface.co/pguerrero-igutierrez/llama_claramed](https://huggingface.co/pguerrero-igutierrez/llama-3.2-claramed]) |
 
 Both merged models are deployed as public Gradio apps on Hugging Face Spaces.
 
