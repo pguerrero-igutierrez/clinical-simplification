@@ -6,7 +6,7 @@
 
 ---
 
-This directory contains the source code `app_llama.py` and `app_qwen.py` and requirement files for the two interactive demo applications deployed on Hugging Face Spaces.
+This directory contains the requirement file `requirements_demo.txt` and the source code `app_llama.py` and `app_qwen.py` for the two interactive demo applications deployed on Hugging Face Spaces.
 
 
 | Model | Demo link | Size | Approx. inference time |
