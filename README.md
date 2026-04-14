@@ -76,7 +76,8 @@ APP1_project_IkerGutierrez_PaulaGuerrero.ipynb
 ```
 
 **Steps:**
-1. Mount your Google Drive and place `claramed_synt_simp_aligned.tsv` at `MyDrive/APP1project/`.
+1. Access [this link](https://datos.cchs.csic.es/en/dataset/clara-med-simplified-sentences/resource/a05fd101-9c06-4312-bb30-13f6ea008d46) to download the corpus `claramed_synt_simp_aligned.tsv`.
+2. Mount your Google Drive and place `claramed_synt_simp_aligned.tsv` at `MyDrive/APP1project/`.
 2. Run all cells sequentially. Each major section is labelled:
    - **Section 0:** Environment setup & imports
    - **Section 1:** Data loading & prompt formatting
