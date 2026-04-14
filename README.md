@@ -34,9 +34,6 @@ Both merged models are deployed as public Gradio apps on Hugging Face Spaces.
 ### Model variants evaluated
 
 We evaluate two variants for each fine-tuned model, along with zero-shot baslines. All models are evaluated on the 120-sentence CLARA-MeD test split using three complementary metrics:
-- SARI 
-- BERTScore (F1) 
-- Flesch–Szigriszt Reading Ease (FRE)
 
 | Model | SARI ↑ | BERT-F1 ↑ | FRE ↑ |
 |-------|--------|-----------|-------|
