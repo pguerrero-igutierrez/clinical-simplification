@@ -146,9 +146,9 @@ Also cite the CLARA-MeD dataset:
 
 ### Contact
 
-
-- [guerrerocastellopaula@gmail.com](mailto:guerrerocastellopaula@gmail.com)  
-- [ikergutierrez@opendeusto.es](mailto:ikergutierrez@opendeusto.es)  
+{pguerrero005, igutierrez134}@ikasle.ehu.eus
+- [pguerrero005](mailto:pguerrero005@ikasle.ehu.eus)  
+- [igutierrez134](mailto:igutierrez134@ikasle.ehu.eus)  
 ---
 *Project for NLP Applications I 2025-26*   
 *Masters in Language Analysis and Processing UPV/EHU*  
