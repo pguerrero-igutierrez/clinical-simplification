@@ -2,8 +2,9 @@
 
 This directory contains the short paper:
 
-**"Clinical Text Simplifiers by Fine-Tuning Qwen and Llama with CLARA-MeD"**  
-*Paula Guerrero Castelló & Iker Gutierrez Fandiño*    
+**"Clinical Text Simplifiers by Fine-Tuning Qwen and Llama with CLARA-MeD"**    
+
+Authors: *Paula Guerrero Castelló & Iker Gutierrez Fandiño*    
 University of the Basque Country (UPV/EHU)
 
 ## Abstract
