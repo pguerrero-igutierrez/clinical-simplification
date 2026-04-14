@@ -6,13 +6,34 @@
 [![HuggingFace - Qwen Demo](https://img.shields.io/badge/%20Demo-Qwen--FT--merged-blue)](https://huggingface.co/spaces/pguerrero-igutierrez/qwen-text-simplifier)
 [![HuggingFace - Llama Demo](https://img.shields.io/badge/%20Demo-Llama--FT--merged-blue)](https://huggingface.co/spaces/pguerrero-igutierrez/llama-text-simplifier)
 
-This project fine-tunes two large language models for the task of automatic text simplification of clinical texts:
-- **Qwen3.5-0.8B**
-- **Llama-3.2-1B-Instruct**
 
-on the [CLARA-MeD corpus](https://github.com/lcampillos/CLARA-MeD), a Spanish parallel corpus of clinical sentences and their simplified versions.
+This project develops and evaluates **automatic clinical text simplification (ATS)** models for Spanish. Clinical texts are often written in dense technical language that patients and non-specialists struggle to understand. Our goal is to make medical information more accessible using fine-tuned language models.
+
+We fine-tune two models on the [CLARA-MeD corpus](https://github.com/lcampillos/CLARA-MeD), a Spanish parallel corpus of clinical sentences and their simplified versions.
+
+| Model | HuggingFace Hub |
+|-------|-----------|-----------------|
+| `Qwen/Qwen3.5-0.8B` | [pguerrero-igutierrez/qwen_claramed](https://huggingface.co/pguerrero-igutierrez/qwen_claramed) |
+| `meta-llama/Llama-3.2-1B-Instruct` | [pguerrero-igutierrez/llama_claramed](https://huggingface.co/pguerrero-igutierrez/llama_claramed) |
+
+Both merged models are deployed as public Gradio apps on Hugging Face Spaces.
+
+### Example
+
+**Input** *(clinical trial protocol)*:
+> *Se recomienda profilaxis tromboembólica durante el postoperatorio.*
+
+**Qwen-FT output**:
+> *Se recomienda prevenir tromboembolismo durante el postoperatorio. El postoperatorio es el período después de una operación. El tromboembolismo es un coágulo de sangre que se forma en un vaso sanguíneo y se mueve a otro lugar del cuerpo.*
+
+**Llama-FT output**:
+> *Se recomienda evitar el tromboembolismo (obstrucción de un vaso sanguíneo por un coágulo de sangre) durante el postoperatorio.*
+
+---
 
 ### Model variants evaluated
+
+We evaluate two variants for each fine-tuned model, along with zero-shot baslines.
 
 | ID | Description |
 |----|-------------|
