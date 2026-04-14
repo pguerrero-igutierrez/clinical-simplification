@@ -1,4 +1,4 @@
-# Clinical Text Simplifier by Fine-Tuning Qwen and Llama with CLARA-MeD
+# Clinical Text Simplifiers by Fine-Tuning Qwen and Llama with CLARA-MeD
 
 **Authors:** Paula Guerrero Castelló & Iker Gutierrez Fandiño    
 
