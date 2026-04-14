@@ -22,7 +22,7 @@ Both merged models are deployed as public Gradio apps on Hugging Face Spaces.
 
 ### Example
 
-**Input** *(clinical trial protocol)*:
+**Input**:
 > *Se recomienda profilaxis tromboembólica durante el postoperatorio.*
 
 **[Qwen-FT](https://huggingface.co/spaces/pguerrero-igutierrez/qwen-text-simplifier) output**:
