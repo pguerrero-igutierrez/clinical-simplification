@@ -4,7 +4,6 @@ Deployed on Hugging Face Spaces: https://huggingface.co/spaces/pguerrero-igutier
 
 This app loads the Llama-FT-merged model (LoRA weights merged into Llama-3.2-1B-Instruct)
 and exposes a simple text-simplification interface.
-No conversational history is maintained between inputs.
 """
 
 import torch
