@@ -114,6 +114,34 @@ python demo/app_llama.py
 
 ---
 
+## Citation
+
+If you use this work, please cite:
+
+```bibtex
+@article{guerrero2025clinical,
+  title     = {Clinical Text Simplifiers by Fine-Tuning Qwen and Llama with CLARA-MeD},
+  author    = {Guerrero Castelló, Paula and Gutierrez Fandiño, Iker},
+  year      = {2025},
+  institution = {University of the Basque Country (EHU)}
+}
+```
+
+Also cite the CLARA-MeD dataset:
+
+@dataset{bartolome2024claramed,
+  author    = {Bartolom{\'e} Rodr{\'i}guez, Roc{\'i}o and Terroba Reinares, Ana Rosa and Campillos-Llanos, Leonardo},
+  title     = {{CLARA-MeD simplified sentences}},
+  year      = {2024},
+  publisher = {DIGITAL.CSIC},
+  doi       = {10.20350/digitalCSIC/16110},
+  url       = {https://doi.org/10.20350/digitalCSIC/16110},
+  note      = {Dataset}
+}
+
+---
+
+
 ### Contact
 
 
