@@ -1,6 +1,8 @@
 # Clinical Text Simplifier by Fine-Tuning Qwen and Llama with CLARA-MeD
 
-**Authors:** Paula Guerrero Castelló & Iker Gutierrez Fandiño — *University of the Basque Country (EHU)*
+**Authors:** Paula Guerrero Castelló & Iker Gutierrez Fandiño    
+*University of the Basque Country (UPV/EHU)*  
+2025-26
 
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](paper/Clinical_text_simplifier.pdf)
 [![HuggingFace - Qwen Demo](https://img.shields.io/badge/%20Demo-Qwen--FT--merged-blue)](https://huggingface.co/spaces/pguerrero-igutierrez/qwen-text-simplifier)
