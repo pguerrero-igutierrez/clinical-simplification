@@ -11,94 +11,96 @@ import torch
 import gradio as gr
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-# ── Model configuration ────────────────────────────────────────────────────────
-MODEL_ID = "pguerrero-igutierrez/llama-clinical-merged"
-DEVICE   = "cuda" if torch.cuda.is_available() else "cpu"
-DTYPE    = torch.float16 if DEVICE == "cuda" else torch.float32
+# ── Model loading ──────────────────────────────────────────────────────────────
+MODEL = "pguerrero-igutierrez/llama-3.2-claramed"
+DEVICE = "cpu"
 
+tokenizer = AutoTokenizer.from_pretrained(MODEL)
+model = AutoModelForCausalLM.from_pretrained(
+    MODEL,
+    dtype=torch.float32,       
+    device_map="cpu",
+)
+model.eval()
+
+# ── Inference ──────────────────────────────────────────────────────────────────
 SYSTEM_PROMPT = (
-    "Eres un asistente médico especializado en simplificar textos médicos complejos "
+    "Eres un asistente médico especializado en simplificar textos médicos "
     "al español sencillo. Simplifica el texto manteniendo la información esencial "
     "pero usando un lenguaje claro y accesible para pacientes sin formación médica."
 )
 
-# ── Load model & tokenizer ─────────────────────────────────────────────────────
-print(f"Loading {MODEL_ID} on {DEVICE} …")
-tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
-model = AutoModelForCausalLM.from_pretrained(
-    MODEL_ID,
-    torch_dtype=DTYPE,
-    device_map="auto",
-)
-model.eval()
-print("Model loaded.")
-
-
-# ── Inference ──────────────────────────────────────────────────────────────────
-def make_prompt(source: str) -> str:
+def make_inference_prompt(source):
     return (
         f"<|im_start|>system\n{SYSTEM_PROMPT}<|im_end|>\n"
         f"<|im_start|>user\nSimplifica el siguiente texto médico:\n\n{source.strip()}<|im_end|>\n"
         "<|im_start|>assistant\n"
     )
 
-
-def simplify(source: str) -> str:
-    if not source.strip():
-        return "⚠️ Por favor, introduce un texto médico para simplificar."
-
-    prompt = make_prompt(source)
+def simplify(text):
+    if not text.strip():
+        return ""
+    prompt = make_inference_prompt(text)
     inputs = tokenizer(prompt, return_tensors="pt").to(DEVICE)
-
     with torch.no_grad():
-        output_ids = model.generate(
-            **inputs,
-            max_new_tokens=128,
-            do_sample=False,          # greedy decoding
+        outputs = model.generate(
+            input_ids=inputs.input_ids,
+            attention_mask=inputs.attention_mask,
+            max_new_tokens=512,
+            do_sample=False,
+            pad_token_id=tokenizer.eos_token_id,
             eos_token_id=tokenizer.convert_tokens_to_ids("<|im_end|>"),
         )
+    gen_tokens = outputs[0][inputs.input_ids.shape[-1]:]
+    pred = tokenizer.decode(gen_tokens, skip_special_tokens=False).strip()
+    for special_tok in ["<|eot_id|>", "<|start_header_id|>", "<|end_header_id|>"]:
+        pred = pred.replace(special_tok, "")
+    if "<|im_end|>" in pred:
+        pred = pred.split("<|im_end|>")[0].strip()
+    return pred
 
-    new_tokens = output_ids[0][inputs["input_ids"].shape[-1]:]
-    result = tokenizer.decode(new_tokens, skip_special_tokens=True)
-    return result.strip()
+def chat(user_message, history):
+    if not user_message.strip():
+        return history, ""
+    response = simplify(user_message)
+    history.append({"role": "user",      "content": user_message})
+    history.append({"role": "assistant", "content": response})
+    return history, ""
 
+# ── UI ─────────────────────────────────────────────────────────────────────────
+css = """
+footer { display: none !important; }
+.built-with { display: none !important; }
+"""
 
-# ── Gradio interface ───────────────────────────────────────────────────────────
-EXAMPLES = [
-    ["Se recomienda profilaxis tromboembólica durante el postoperatorio."],
-    ["Diagnóstico de cáncer de vejiga con invasión muscular (MIBC) confirmado histológicamente "
-     "(estadio T2-4a N0/N1 M0) mediante resección transuretral del tumor vesical (TURBT) "
-     "realizada no más de 3 meses antes de la visita de selección."],
-    ["Se incluirán aquellos pacientes con cambios degenerativos espondiloartrósicos "
-     "(hernia discal, estenosis de canal, estenosis de recesos laterales, estenosis de foramen "
-     "de conjunción, espondilolistesis) que no verifiquen los criterios de exclusión."],
-]
+with gr.Blocks(title="CLARA-MeD Simplifier") as demo:   
+    gr.Markdown("## CLARA-MeD Clinical Text Simplifier")
+    gr.Markdown("*Developed by Paula Guerrero & Iker Gutierrez. Fine-tuned on Llama-3.2-1B-Instruct.* ")
 
-with gr.Blocks(title="Clinical Text Simplifier — Llama") as demo:
-    gr.Markdown(
-        """
-        # 🏥 Clinical Text Simplifier — Llama-FT-merged
-        Simplificación automática de textos clínicos en español.  
-        Modelo: **Llama-3.2-1B-Instruct** fine-tuned with LoRA on [CLARA-MeD](https://github.com/lcampillos/CLARA-MeD).
-        > This demo is **not** a conversational chatbot. Each input is processed independently.
-        """
-    )
+    chatbot = gr.Chatbot(value=[], height=460, show_label=False)  
+
     with gr.Row():
-        with gr.Column():
-            input_box = gr.Textbox(
-                label="Texto médico complejo (español)",
-                placeholder="Introduce aquí el texto clínico a simplificar…",
-                lines=6,
-            )
-            submit_btn = gr.Button("Simplificar", variant="primary")
-        with gr.Column():
-            output_box = gr.Textbox(
-                label="Texto simplificado",
-                lines=6,
-                interactive=False,
-            )
-    gr.Examples(examples=EXAMPLES, inputs=input_box)
-    submit_btn.click(fn=simplify, inputs=input_box, outputs=output_box)
+        input_box = gr.Textbox(
+            lines=2,
+            placeholder="Type your text here...",
+            label="",
+            scale=5,
+            container=False,
+        )
+        btn = gr.Button("Simplify", variant="primary", scale=1, min_width=70)
 
-if __name__ == "__main__":
-    demo.launch()
+    gr.Examples(
+        label="Examples",
+        examples=[
+            ["Se objetiva derrame pleural bilateral."],
+            ["El diagnóstico diferencial incluye tromboembolismo pulmonar."],
+            ["Mujeres de más de 18 años y menores de 42 programadas para la realización de un ciclo de fecundación in vitro con transferencia diferida de un blastocisto tras screening genético preimplantacional (PGT-A)."],
+        ],
+        inputs=input_box,
+    )
+
+    state = gr.State([])
+    btn.click(fn=chat, inputs=[input_box, state], outputs=[chatbot, input_box])
+    input_box.submit(fn=chat, inputs=[input_box, state], outputs=[chatbot, input_box])
+
+demo.launch(css=css)   
