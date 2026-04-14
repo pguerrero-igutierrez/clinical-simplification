@@ -115,8 +115,9 @@ python demo/app_llama.py
 
 ### Contact
 
-[guerrerocastellopaula@gmail.com](mailto:guerrerocastellopaula@gmail.com)  
-[ikergutierrez@opendeusto.es](mailto:ikergutierrez@opendeusto.es)  
+
+- [guerrerocastellopaula@gmail.com](mailto:guerrerocastellopaula@gmail.com)  
+- [ikergutierrez@opendeusto.es](mailto:ikergutierrez@opendeusto.es)  
 ---
 *Project for NLP Applications I*   
 *Masters in Language Analysis and Processing*  
