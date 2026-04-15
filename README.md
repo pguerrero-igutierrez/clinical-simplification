@@ -52,7 +52,7 @@ We evaluate two variants for each fine-tuned model, along with zero-shot basline
 
 Key findings:
 - All fine-tuned models **consistently outperform their zero-shot baselines** across all metrics.
-- Fine-tuned models **surpass the human expert reference** in meaning preservation (BERT-F1), while approaching it in readability (FRE) and humanlikeness (SARI).
+- Fine-tuned models **surpass the human expert reference** in meaning preservation (BERT-F1), while approaching it in readability (FRE) and humanlike simplification (SARI).
 - **Merging** the LoRA adapter into the base model leads to slightly more conservative simplifications, probably because weight interpolation weakens task-specific alignment.
 - **Qwen-FT-adapter achieves the best overall performance**, making it our recommended model, although the other fine-tuned variants perform similarly.
 
