@@ -46,7 +46,7 @@ We evaluate two variants for each fine-tuned model, along with zero-shot basline
 | **Llama-FT-adapter** | 55.56 | 89.64 | 48.82 |
 | Llama-FT-merged | 54.66 | 89.63 | 48.72 |
 | Qwen-base (zero-shot) | 39.48 | 74.70 | 58.58 |
-| **Qwen-FT-adapter★**  | **57.73★** | 89.30 | **49.75★** |
+| **Qwen-FT-adapter ★**  | **57.73★** | 89.30 | **49.75★** |
 | Qwen-FT-merged | 54.04 | **90.84★** | 46.81 |
 | Human reference | — | 87.33 | 50.92 |
 
