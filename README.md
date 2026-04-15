@@ -124,7 +124,6 @@ If you use this work, please cite:
   title        = {Clinical text simplifiers by fine-tuning Qwen and Llama with CLARA-MeD},
   author       = {Guerrero Castelló, Paula and Gutierrez Fandiño, Iker},
   year         = {2026},
-  howpublished = {Course project, University of the Basque Country (EHU)},
   note         = {Unpublished work}
 }
 ```
