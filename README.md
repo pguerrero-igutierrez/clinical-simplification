@@ -122,7 +122,7 @@ If you use this work, please cite:
 ```bibtex
 @misc{guerrero2026clinical,
   title        = {Clinical text simplifiers by fine-tuning Qwen and Llama with CLARA-MeD},
-  author       = {Guerrero Castelló, Paula and Gutierrez Fandiño, Iker},
+  author       = {Guerrero Castelló, Paula and Gutierrez Fandi\~no, Iker},
   year         = {2026},
   note         = {Unpublished work}
 }
