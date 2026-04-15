@@ -8,7 +8,7 @@
 [![HuggingFace - Llama Demo](https://img.shields.io/badge/%20Demo-Llama--FT--merged-blue)](https://huggingface.co/spaces/pguerrero-igutierrez/llama-text-simplifier)
 
 
-This project develops and evaluates two **automatic clinical text simplification (ATS)** models for Spanish. Clinical texts are often written in dense technical language that patients and non-specialists struggle to understand. Our goal is to make medical information more accessible using fine-tuned language models.
+This project develops and evaluates two **clinical ATS (automatic text simplification)** models for Spanish. Clinical texts are often written in dense technical language that patients and non-specialists struggle to understand. Our goal is to make medical information more accessible using fine-tuned language models.
 
 We fine-tune the models on the **CLARA-MeD simplified sentences dataset** (Bartolomé Rodríguez et al., 2024), a Spanish parallel corpus for clinical text simplification derived from clinical trial protocols.   
 
