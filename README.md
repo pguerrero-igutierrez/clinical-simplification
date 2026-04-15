@@ -121,7 +121,7 @@ If you use this work, please cite:
 
 ```bibtex
 @misc{guerrero2026clinical,
-  title        = {Clinical Text Simplifiers by Fine-Tuning Qwen and Llama with CLARA-MeD},
+  title        = {Clinical text simplifiers by fine-tuning Qwen and Llama with CLARA-MeD},
   author       = {Guerrero Castelló, Paula and Gutierrez Fandiño, Iker},
   year         = {2026},
   howpublished = {Course project, University of the Basque Country (EHU)},
@@ -151,4 +151,4 @@ Also cite the CLARA-MeD dataset:
 - [igutierrez134@ikasle.ehu.eus](mailto:igutierrez134@ikasle.ehu.eus)  
 ---
 *Project for NLP Applications I 2025-26*   
-*Masters in Language Analysis and Processing UPV/EHU*  
+*Masters in Language Analysis and Processing (EHU)*  
