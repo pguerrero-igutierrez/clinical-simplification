@@ -3,7 +3,7 @@
 **Authors:** Paula Guerrero Castelló & Iker Gutierrez Fandiño    
 
 
-[![Paper](https://img.shields.io/badge/Paper-PDF-red)](paper/Clinical_text_simplifier.pdf)
+[![Paper](https://img.shields.io/badge/Paper-PDF-red)](paper/paper.pdf)
 [![HuggingFace - Qwen Demo](https://img.shields.io/badge/%20Demo-Qwen--FT--merged-blue)](https://huggingface.co/spaces/pguerrero-igutierrez/qwen-text-simplifier)
 [![HuggingFace - Llama Demo](https://img.shields.io/badge/%20Demo-Llama--FT--merged-blue)](https://huggingface.co/spaces/pguerrero-igutierrez/llama-text-simplifier)
 
@@ -124,8 +124,7 @@ If you use this work, please cite:
   title        = {Clinical Text Simplifiers by Fine-Tuning Qwen and Llama with CLARA-MeD},
   author       = {Guerrero Castelló, Paula and Gutierrez Fandiño, Iker},
   year         = {2026},
-  howpublished = {Course project, University of the Basque Country (EHU)},
-  note         = {Unpublished work}
+  note         = {Unpublished manuscript}
 }
 ```
 
@@ -151,4 +150,4 @@ Also cite the CLARA-MeD dataset:
 - [igutierrez134@ikasle.ehu.eus](mailto:igutierrez134@ikasle.ehu.eus)  
 ---
 *Project for NLP Applications I 2025-26*   
-*Masters in Language Analysis and Processing UPV/EHU*  
+*Masters in Language Analysis and Processing (EHU)*  
