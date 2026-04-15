@@ -109,7 +109,7 @@ python demo/app_llama.py
 | `APP1_project_IkerGutierrez_PaulaGuerrero.ipynb` | Main notebook implementing the full pipeline |
 | `results/` | Directory containing model predictions and evaluation results |
 | `demo/` | Directory containing the interactive demo applications |
-| `paper/` | Final project paper |
+| `paper/` | Paper |
 | `requirements.txt` | Python dependencies for reproducing the experiments |
 | `README.md` | Project description and usage guide |
 
