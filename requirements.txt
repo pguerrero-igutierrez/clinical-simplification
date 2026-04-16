@@ -1,6 +1,7 @@
-# Unsloth (install separately — see instructions below)
+# Unsloth (install separately and in first place)
 # pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
 # pip install --no-deps xformers trl peft accelerate bitsandbytes
+
 
 torch>=2.1.0
 transformers>=4.41.0
@@ -18,9 +19,11 @@ matplotlib>=3.7.0
 tqdm>=4.65.0
 scikit-learn>=1.3.0
 
+
 # Evaluation
-# easse: install from source
-# git clone https://github.com/feralvam/easse.git && cd easse && pip install -e .
+# easse - install from source:
+git clone https://github.com/feralvam/easse.git && cd easse && pip install -e .
+
 sacrebleu>=2.3.0
 bert-score>=0.3.13
 textstat>=0.7.3
