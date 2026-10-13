@@ -148,6 +148,4 @@ Also cite the CLARA-MeD dataset:
 
 - [pguerrero005@ikasle.ehu.eus](mailto:pguerrero005@ikasle.ehu.eus)  
 - [igutierrez134@ikasle.ehu.eus](mailto:igutierrez134@ikasle.ehu.eus)  
----
-*Project for NLP Applications I 2025-26*   
-*Master's in Language Analysis and Processing (EHU)*  
+
