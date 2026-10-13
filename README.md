@@ -144,8 +144,14 @@ Also cite the CLARA-MeD dataset:
 ---
 
 
-### Contact
+## Contact
 
-- [pguerrero005@ikasle.ehu.eus](mailto:pguerrero005@ikasle.ehu.eus)  
-- [igutierrez134@ikasle.ehu.eus](mailto:igutierrez134@ikasle.ehu.eus)  
+**Paula Guerrero Castelló**<br> 
+*Computational linguist*<br>
+[GitHub Profile](https://github.com/guerreropaula) | [LinkedIn](https://www.linkedin.com/in/paula-guerrero-castelló)
+
+
+**Iker Gutierrez Fandiño**<br>
+*Computational linguist*<br>
+[GitHub Profile](https://github.com/iker-gutierrez) | [LinkedIn](https://www.linkedin.com/in/iker-gutierrez-fandino)
 
